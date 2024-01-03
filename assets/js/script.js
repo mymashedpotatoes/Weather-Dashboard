@@ -67,8 +67,51 @@ function displayCurrentWeather(data) {
 }
 
 //function to display 5-day forecast
-// function displayFiveDayForecast(data) {
-// }
+function displayFiveDayForecast(data) {
+  const currentDate = dayjs(); 
+
+  for (var i = 4; i < data.list.length; i += 8) {
+
+    console.log(data.list.length);
+    var futureForecast = data.list[i];
+
+    const card = document.createElement("div");
+    card.classList.add('card');
+
+    const cardContent = document.createElement("div");
+    cardContent.classList.add('card-content');
+
+    const futureDay = currentDate.add(i / 8, 'day').format('MM/DD/YYYY'); 
+    const futureDateElement = document.createElement("h4");
+    futureDateElement.classList.add('future-info');
+    futureDateElement.textContent = futureDay;
+    cardContent.appendChild(futureDateElement);
+
+    const futureIcon = document.createElement("img");
+    const futurepicEl = futureForecast.weather[0].icon;
+    futureIcon.classList.add('future-info');
+    futureIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + futurepicEl + "@2x.png");
+    cardContent.appendChild(futureIcon);
+
+    const futureTemp = document.createElement("div");
+    futureTemp.classList.add('future-info');
+    futureTemp.textContent = "Temp: " + k2f(futureForecast.main.temp) + "\u00B0 F";
+    cardContent.appendChild(futureTemp);
+
+    const futureWind = document.createElement("div");
+    futureWind.classList.add('future-info');
+    futureWind.textContent = "Wind: " + futureForecast.wind.speed + " MPH";
+    cardContent.appendChild(futureWind);
+
+    const futureHumid = document.createElement("div");
+    futureHumid.classList.add('future-info');
+    futureHumid.textContent = "Humidity: " + futureForecast.main.humidity + "%";
+    cardContent.appendChild(futureHumid);
+
+    card.appendChild(cardContent);
+    document.body.appendChild(card);
+  }
+}
 
 //function to display search history
 // function displaySearchHistory(cityHistory) {
