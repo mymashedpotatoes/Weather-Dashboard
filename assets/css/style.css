@@ -1,0 +1,132 @@
+:root {
+    --brown: #4C392D;
+    --dark: #9E8472;
+    --light: #A89D92;
+    --grey: #DDDAD3;
+    --pink: #F9F0EA;
+}
+body {
+    background-color: var(--grey);
+}
+header {
+    text-align: center;
+    padding: 4%;
+    font-size: 2em;
+    background-color: var(--dark);
+    color: var(--grey);
+}
+h1 {
+    font-weight: bolder;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+h3 {
+    text-align: center;
+}
+ul {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+}
+
+aside {
+    position: relative;
+
+}
+
+.sidebar-container {
+    float: left;
+    width: 20%;
+    background-color: var(--brown);
+    color: #F9F0EA;
+}
+
+.input {
+    width:70%;
+}
+
+.search-button {
+    background-color: rgb(112, 112, 112);
+    margin-top: 3%;
+    background-color: var(--light);
+    padding: 1%;
+}
+form {
+    padding: 10%;
+}
+
+.city {
+    font-size: 3em;
+    text-align: center;
+    width: 80%;
+    float: right;
+    background-color: var(--light);
+    padding: 1%;
+    color: #4C392D;
+}
+
+.current {
+    width: 80%;
+    float: right;
+    background-color: var(--light);
+    font-size: 1.5em;
+    text-align: center;
+    color: #4C392D;
+}
+
+.five-day {
+    background-color: var(--light);
+}
+
+.future {
+    background-color: var(--light);
+    
+}
+
+.card {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin: 1%;
+    padding: 3.5%;
+    background-color: var(--light);
+    float: left;
+}
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+    text-align: center;
+
+}
+  
+  .future-info {
+    margin-bottom: 8px;
+    background-color: var(--light);
+
+}
+img {
+   align-self: center;
+}
+
+.history-buttons {
+    padding: 3%;
+    margin: 4%;
+    display: block;
+    width: 80%;
+    font-size: 1.4em;
+    background-color: var(--light);
+    align-self: center;
+
+}
+
+.history {
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-left: 11%;
+}
