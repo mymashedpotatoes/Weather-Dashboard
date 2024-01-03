@@ -8,7 +8,7 @@ var cityName = document.getElementById("city-name");
 var fiveDayForecast = document.querySelector("#five-day");
 
 //function to get weather data
-function getWeather(city) {
+function getWeather() {
   var inputCity = document.getElementById("city-input").value;
 
   const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=`+inputCity+`&limit=5&appid=`+APIKey;
@@ -133,7 +133,9 @@ function displaySearchHistory() {
     searchBtns.appendChild(button);
 
     button.addEventListener("click", function() {
-      getWeather(city); 
+      var historyCity = $(this).text();
+      console.log(historyCity);
+      getWeather(historyCity);
     });
   });
 }
