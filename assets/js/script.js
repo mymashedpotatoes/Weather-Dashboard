@@ -8,8 +8,7 @@ var cityName = document.getElementById("city-name");
 var fiveDayForecast = document.querySelector("#five-day");
 
 //function to get weather data
-function getWeather() {
-  var inputCity = document.getElementById("city-input").value;
+function getWeather(inputCity) {
 
   const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=`+inputCity+`&limit=5&appid=`+APIKey;
 
